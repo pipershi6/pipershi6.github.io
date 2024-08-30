@@ -87,22 +87,11 @@
   <script>
     try {
       var typed = new Typed("#subtitle", {
-        strings: ['In the ethereal expanse of the digital realm,
-where pixels dance and bytes whisper,
-lies a sanctuary known as &#34;A Floated Cybertown.&#34; 
-Here, the boundaries of reality blur, 
-and the cityscape rises like a mirage, 
-suspended in the boundless ether. 
-Its streets are paved with the dreams of technomancers, 
-and its buildings are crafted from the essence of imagination. 
-As you wander through its virtual alleys, 
-you are transported to a world where the past and future coalesce, 
-where every corner holds a secret waiting to be discovered. 
-', '', ''],
+        strings: ['', '', ''],
         startDelay: 0,
         typeSpeed: 200,
         loop: true,
-        backSpeed: 1,
+        backSpeed: 100,
         showCursor: true
       });
     } catch (err) {
@@ -115,19 +104,20 @@ where every corner holds a secret waiting to be discovered.
   
   
   
-
 <div class="notice" style="margin-top:50px">
     <i class="ri-heart-fill"></i>
-    <div class="notice-content" id="broad"></div>
+    <div class="notice-content">In the ethereal expanse of the digital realm,
+where pixels dance and bytes whisper,
+lies a sanctuary known as &#34;A Floated Cybertown.&#34; 
+ 
+Its streets are paved with the dreams of technomancers, 
+and its buildings are crafted from the essence of imagination. 
+As you wander through its virtual alleys, 
+you are transported to a world where the past and future coalesce, 
+where every corner holds a secret waiting to be discovered. 
 </div>
-<script type="text/javascript">
-    fetch('https://v1.hitokoto.cn')
-        .then(response => response.json())
-        .then(data => {
-            document.getElementById("broad").innerHTML = data.hitokoto;
-        })
-        .catch(console.error)
-</script>
+</div>
+
 
 <style>
     .notice {
