@@ -109,7 +109,7 @@
     <div class="article-entry" itemprop="articleBody">
        
   <h1 id="错误1"><a href="#错误1" class="headerlink" title="错误1"></a>错误1</h1><p><strong>问题：使用git部署hexo时报错：ERROR Deployer not found: git</strong></p>
-<h3 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h3><p>按照Hexo官方一键部署教程（在 GitHub Pages 上部署 Hexo | Hexo）执行部署命令时，出现如下错误：<br>​​​!​<a href="../images/hexo1.png">参考官方教程时出现报错</a></p>
+<h3 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h3><p>按照Hexo官方一键部署教程（在 GitHub Pages 上部署 Hexo | Hexo）执行部署命令时，出现如下错误：<br>​!​<a href="../images/hexo1.png">参考官方教程时出现报错</a></p>
 <h3 id="解决思路"><a href="#解决思路" class="headerlink" title="解决思路"></a>解决思路</h3><p>搜索后得知该问题是说我一键部署Hexo需要的hexo-deployer-git没有安装。但是我在安装Hexo的根目录已经安装成功了hexo-deployer-git。思考后联想到最开始新建项目时Hexo提示了一个错误：<br><img src="/../images/hexo2.png" alt="新建Hexo时出现的错误"></p>
 <p>所以猜想到可能是因为我的项目并不在根目录，执行部署操作需要在项目目录下，而我之前安装的hexo-deployer-git安装在了根目录，部署时hexo无法去根目录下找我的deployer。</p>
 <p>考虑可以<strong>使用cnpm指令</strong>，已有博客尝试该做法：</p>
