@@ -13,7 +13,7 @@
         name="viewport"
         content="width=device-width, initial-scale=1, maximum-scale=1"
       />
-      <title>test |  Courier</title>
+      <title>Hexo 配置过程记录 |  Courier</title>
   <meta name="generator" content="hexo-theme-ayer">
       
       <link rel="shortcut icon" href="/images/20240831144000.jpg" />
@@ -57,7 +57,7 @@
     <main class="content on">
       <section class="outer">
   <article
-  id="post-test"
+  id="post-配置Hexo"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -68,7 +68,7 @@
     <header class="article-header">
        
 <h1 class="article-title sea-center" style="border-left:0" itemprop="name">
-  test
+  Hexo 配置过程记录
 </h1>
  
 
@@ -76,15 +76,15 @@
     </header>
      
     <div class="article-meta">
-      <a href="/2024/08/30/test/" class="article-date">
-  <time datetime="2024-08-30T13:46:47.000Z" itemprop="datePublished">2024-08-30</time>
+      <a href="/2024/09/16/%E9%85%8D%E7%BD%AEHexo/" class="article-date">
+  <time datetime="2024-09-16T12:52:02.469Z" itemprop="datePublished">2024-09-16</time>
 </a>   
 <div class="word_count">
     <span class="post-time">
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> Word count:</span>
-            <span class="post-count">0</span>
+            <span class="post-count">301</span>
         </span>
     </span>
 
@@ -100,13 +100,27 @@
  
     </div>
       
+    <div class="tocbot"></div>
+
 
 
 
   
     <div class="article-entry" itemprop="articleBody">
        
-   
+  <h1 id="错误1"><a href="#错误1" class="headerlink" title="错误1"></a>错误1</h1><p><strong>问题：使用git部署hexo时报错：ERROR Deployer not found: git</strong></p>
+<h3 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h3><p>按照Hexo官方一键部署教程（在 GitHub Pages 上部署 Hexo | Hexo）执行部署命令时，出现如下错误：<br>​​​​<a href="../images/hexo1.png">参考官方教程时出现报错</a></p>
+<h3 id="解决思路"><a href="#解决思路" class="headerlink" title="解决思路"></a>解决思路</h3><p>搜索后得知该问题是说我一键部署Hexo需要的hexo-deployer-git没有安装。但是我在安装Hexo的根目录已经安装成功了hexo-deployer-git。思考后联想到最开始新建项目时Hexo提示了一个错误：<br><a href="../images/hexo2.png">新建Hexo时出现的错误</a></p>
+<p>所以猜想到可能是因为我的项目并不在根目录，执行部署操作需要在项目目录下，而我之前安装的hexo-deployer-git安装在了根目录，部署时hexo无法去根目录下找我的deployer。</p>
+<p>考虑可以<strong>使用cnpm指令</strong>，已有博客尝试该做法：</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/Lemon_Review/article/details/120240700">搭建个人博客安装一键部署插件 npm install hexo-deployer-git –save 的问题(Hexo框架)</a></p>
+</blockquote>
+<p>按照该帖操作，问题解决。</p>
+<h1 id="​错误2"><a href="#​错误2" class="headerlink" title="​错误2"></a>​错误2</h1><p><strong>问题：hexo发布到GitHub出现404</strong></p>
+<p>在hexo部署到GitHub Pages后，访问网址出现404错误。</p>
+<p>解决方法：<br><a target="_blank" rel="noopener" href="https://blog.csdn.net/jerry81smile/article/details/132666321">https://blog.csdn.net/jerry81smile/article/details/132666321</a></p>
+ 
       <!-- reward -->
       
       <div id="reword-out">
@@ -176,7 +190,7 @@
     <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://pipershi6.github.io/2024/08/30/test/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://pipershi6.github.io/2024/09/16/%E9%85%8D%E7%BD%AEHexo/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -188,9 +202,9 @@
   <nav class="article-nav">
     
     
-      <a href="/2024/08/30/test2/" class="article-nav-link">
+      <a href="/2024/08/30/hexo/" class="article-nav-link">
         <strong class="article-nav-caption">下一篇</strong>
-        <div class="article-nav-title">test2</div>
+        <div class="article-nav-title">Hexo管理文章的常用命令</div>
       </a>
     
   </nav>
