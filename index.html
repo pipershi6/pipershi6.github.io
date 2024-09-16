@@ -181,17 +181,17 @@ where every corner holds a secret waiting to be discovered.
       
     <div class="article-entry" itemprop="articleBody">
        
-  <h1 id="错误1"><a href="#错误1" class="headerlink" title="错误1"></a>错误1</h1><p><strong>问题：使用git部署hexo时报错：ERROR Deployer not found: git</strong></p>
-<h3 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h3><p>按照Hexo官方一键部署教程（在 GitHub Pages 上部署 Hexo | Hexo）执行部署命令时，出现如下错误：<br>​!​<a href="../images/hexo1.png">参考官方教程时出现报错</a></p>
-<h3 id="解决思路"><a href="#解决思路" class="headerlink" title="解决思路"></a>解决思路</h3><p>搜索后得知该问题是说我一键部署Hexo需要的hexo-deployer-git没有安装。但是我在安装Hexo的根目录已经安装成功了hexo-deployer-git。思考后联想到最开始新建项目时Hexo提示了一个错误：<br><img src="/../images/hexo2.png" alt="新建Hexo时出现的错误"></p>
-<p>所以猜想到可能是因为我的项目并不在根目录，执行部署操作需要在项目目录下，而我之前安装的hexo-deployer-git安装在了根目录，部署时hexo无法去根目录下找我的deployer。</p>
+  <h1 id="错误-1"><a href="#错误-1" class="headerlink" title="错误 1"></a>错误 1</h1><p><strong>问题：使用 git 部署 hexo 时报错：ERROR Deployer not found: git</strong></p>
+<h3 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h3><p>按照 Hexo 官方一键部署教程（在 GitHub Pages 上部署 Hexo | Hexo）执行部署命令时，出现如下错误：<br><img src="/../images/hexo1.png" alt="参考官方教程时出现报错"></p>
+<h3 id="解决思路"><a href="#解决思路" class="headerlink" title="解决思路"></a>解决思路</h3><p>搜索后得知该问题是说我一键部署 Hexo 需要的 hexo-deployer-git 没有安装。但是我在安装 Hexo 目录已经安装成功了 hexo-deployer-git。思考后联想到最开始新建项目时Hexo提示了一个错误：<br><img src="/../images/hexo2.png" alt="新建 Hexo 时出现的错误"></p>
+<p>所以猜想：可能是因为我的项目并不在根目录，执行部署操作需要在项目目录下，而我之前安装的 hexo-deployer-git 安装在了根目录，部署时 hexo 无法去根目录下找我的 deployer。</p>
 <p>考虑可以<strong>使用cnpm指令</strong>，已有博客尝试该做法：</p>
 <blockquote>
 <p><a target="_blank" rel="noopener" href="https://blog.csdn.net/Lemon_Review/article/details/120240700">搭建个人博客安装一键部署插件 npm install hexo-deployer-git –save 的问题(Hexo框架)</a></p>
 </blockquote>
 <p>按照该帖操作，问题解决。</p>
-<h1 id="​错误2"><a href="#​错误2" class="headerlink" title="​错误2"></a>​错误2</h1><p><strong>问题：hexo发布到GitHub出现404</strong></p>
-<p>在hexo部署到GitHub Pages后，访问网址出现404错误。</p>
+<h1 id="​错误-2"><a href="#​错误-2" class="headerlink" title="​错误 2"></a>​错误 2</h1><p><strong>问题：hexo 发布到 GitHub 出现 404</strong></p>
+<p>在 hexo 部署到 GitHub Pages 后，访问网址出现404错误。</p>
 <p>解决方法：<br><a target="_blank" rel="noopener" href="https://blog.csdn.net/jerry81smile/article/details/132666321">https://blog.csdn.net/jerry81smile/article/details/132666321</a></p>
  
       <!-- reward -->
@@ -250,7 +250,9 @@ where every corner holds a secret waiting to be discovered.
 <p>其中 <code>&lt;folder&gt;</code> 是你希望创建的博客目录的名称。</p>
 <p>安装依赖：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> &lt;folder&gt;</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure>
-
+<blockquote>
+<p>注意：需要在blog项目目录下执行hexo相关命令。</p>
+</blockquote>
 <h2 id="3-创建新文章"><a href="#3-创建新文章" class="headerlink" title="3. 创建新文章"></a>3. 创建新文章</h2><p>要创建一篇新文章，可以使用以下命令：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new <span class="string">&quot;文章标题&quot;</span></span><br></pre></td></tr></table></figure>
 
